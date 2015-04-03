@@ -8,6 +8,9 @@
  * Text production rules: http://help.eclipse.org/juno/topic/org.eclipse.acceleo.doc/pages/reference/textproductionrules.html?cp=5_3_5
  *
  *******************************************************************************
+ 
+ * should beexecuted in the root JHipster project (with pom.xml, Gruntfile.js and bower.json)
+ 
 [/comment]
 [module jhipster-m2t('http://www.eclipse.org/uml2/4.0.0/UML')/]
 
@@ -15,6 +18,7 @@
 [comment @main/]
 [file (c.name.concat('.sh').trim(), false, 'UTF-8')]
 #!/bin/bash
+mkdir .jhipster
 mv jhipster/* .jhipster/.
 [for (e : NamedElement|c.getOwnedMembers())]
 [if (e.oclIsTypeOf(Class) and e.name.toLower() <> 'user')]
