@@ -19,7 +19,7 @@
 [file (c.name.concat('.sh').trim(), false, 'UTF-8')]
 Inventaire des diagrammes
 [for (e : NamedElement|c.getOwnedMembers())]
-[e.oclIsTypeOf(Class)] : [e.name.toLower()/]
+[e.oclIsTypeOf(Class)/] : [e.name.toLower()/]
 [/for]
 [/file]
 [/template]
