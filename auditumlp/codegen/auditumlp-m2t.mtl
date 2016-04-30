@@ -18,7 +18,7 @@
 [comment @main/]
 [file (c.name.concat('.sh').trim(), false, 'UTF-8')]
 Inventaire des diagrammes
-[for (e : NamedElement|p.getOwnedMembers())]
+[for (e : NamedElement|c.getOwnedMembers())]
 [e.name.toLower()/]
 [/for]
 [/file]
