@@ -18,7 +18,7 @@
 [comment @main/]
 [file (p.name.concat('.txt').trim(), false, 'UTF-8')]
 Inventaire des diagrammes
-[for (e : NamedElement|c.getOwnedMembers())]
+[for (e : NamedElement|p.getOwnedMembers())]
 [e.oclIsTypeOf(Class)/] : [e.name.toLower()/]
 [/for]
 [/file]
