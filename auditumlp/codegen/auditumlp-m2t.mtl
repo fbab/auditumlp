@@ -14,12 +14,12 @@
 [/comment]
 [module auditumlp-m2t('http://www.eclipse.org/uml2/4.0.0/UML')/]
 
-[template public generate(p : Package)]
+[template public generate(c : Package)]
 [comment @main/]
-[file (p.name.concat('.txt').trim(), false, 'UTF-8')]
+[file (c.name.concat('.sh').trim(), false, 'UTF-8')]
 Inventaire des diagrammes
 [for (e : NamedElement|p.getOwnedMembers())]
-[e.oclIsTypeOf(Class)/] : [e.name.toLower()/]
+[e.name.toLower()/]
 [/for]
 [/file]
 [/template]
