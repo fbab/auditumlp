@@ -17,13 +17,9 @@
 [template public generate(c : Package)]
 [comment @main/]
 [file (c.name.concat('.sh').trim(), false, 'UTF-8')]
-#!/bin/bash
-mkdir .jhipster
-mv jhipster/* .jhipster/.
+Inventaire des diagrammes
 [for (e : NamedElement|c.getOwnedMembers())]
-[if (e.oclIsTypeOf(Class) and e.name.toLower() <> 'user')]
-yo jhipster:entity [e.name.toLower()/]
-[/if]
+[e.oclIsTypeOf(Class)] : [e.name.toLower()/]
 [/for]
 [/file]
 [/template]
